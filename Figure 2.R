@@ -33,7 +33,9 @@ dir='01_Figure2'
 dir.create(dir)
 setwd(dir)
 
-## main figure
+#################
+## figure 2b  ##
+#################
 Idents(obj) <- "level1_cell"
 levels(obj) <- c("B","Plasma", "T&NK", "T_Proliferating",'Myeloid','Mast', "pDCs","Epithelial", "Fibroblasts", "Endothelial")
 p2b = DimPlot(obj, reduction = 'umap',cols = my_color, pt.size = pt) #same as pS2b

@@ -38,7 +38,9 @@ pt = 0.7
 my_color = c("#A6CEE3", "#1F78B4", "#B2DF8A", "#33A02C", "#FB9A99",
              "#E31A1C", "#FDBF6F", "#CAB2D6","#FF7F00", "#6A3D9A")
 
-## figure S2a
+#################
+## figure S2a  ##
+#################
 pS2a = DimPlot(obj, label = T, reduction = 'umap',pt.size = pt)
 ggsave("01_clustering_pS2a.pdf",plot=pS2a, width = 5.5, height = 4.5)
 
@@ -69,7 +71,10 @@ anno_gene = c("PTPRC","CD19", "MS4A1","CD79A","CD79B","BANK1","JCHAIN","XBP1","M
               "EPCAM","CDH1", "KRT8","COL1A1","COL1A2","COL3A1","COL6A1",   
               "PECAM1","VWF", "ENG",'CLDN5')
 
-## figure S2c
+#################
+## figure S2c  ##
+#################
+
 # Idents(obj) = 'seurat_clusters'
 pS2c = DotPlot(obj, features = unique(anno_gene), cluster.idents = F) + 
   RotatedAxis() + # scale_color_gradient2(low = "lightgray", mid = "white", high = "#FB8604") + 
@@ -79,11 +84,19 @@ pS2c = DotPlot(obj, features = unique(anno_gene), cluster.idents = F) +
 ggsave("02_bubblePlot_pS2c.pdf",plot=pS2c, width = 11, height = 5)
 
 
+#################
+## figure S2b  ##
+#################
+
 Idents(obj) <- "level1_cell"
 levels(obj) <- c("B","Plasma", "T&NK", "T_Proliferating",'Myeloid','Mast', "pDCs","Epithelial", "Fibroblasts", "Endothelial")
 pS2b = DimPlot(obj, reduction = 'umap',cols = my_color, pt.size = pt) #same as pS2b
 ggsave("03_clustering_pS2b.pdf",plot=p2b, width = 6, height = 4.5)
-## figure S2d
+
+#################
+## figure S2d  ##
+#################
+
 pS2d = DotPlot(obj, features = unique(anno_gene), cluster.idents = F) + 
   RotatedAxis() +  scale_color_gradient2(low = "lightgray", mid = "white", high = "#FB8604") + 
   theme(axis.title.x = element_blank(),strip.text.x = element_text(angle=90, size = 10)) +
