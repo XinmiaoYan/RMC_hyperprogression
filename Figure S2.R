@@ -42,7 +42,7 @@ my_color = c("#A6CEE3", "#1F78B4", "#B2DF8A", "#33A02C", "#FB9A99",
 ## figure S2a  ##
 #################
 pS2a = DimPlot(obj, label = T, reduction = 'umap',pt.size = pt)
-ggsave("01_clustering_pS2a.pdf",plot=pS2a, width = 5.5, height = 4.5)
+ggsave("01_umap_pS2a.pdf",plot=pS2a, width = 5.5, height = 4.5)
 
 
 # Extract UMAP coordinates
@@ -60,7 +60,7 @@ output_df <- cbind(UMAP_1 = umap_coords[, 1],
 
 head(output_df)
 # Write to a tab-separated file
-write.table(output_df, file = "01_umap_with_metadata.tsv", sep = "\t", quote = FALSE, row.names = TRUE)
+write.table(output_df, file = "01_umap_with_metadata_23880.tsv", sep = "\t", quote = FALSE, row.names = TRUE)
 
 
 anno_gene = c("PTPRC","CD19", "MS4A1","CD79A","CD79B","BANK1","JCHAIN","XBP1","MZB1",    
@@ -75,14 +75,13 @@ anno_gene = c("PTPRC","CD19", "MS4A1","CD79A","CD79B","BANK1","JCHAIN","XBP1","M
 ## figure S2c  ##
 #################
 
-# Idents(obj) = 'seurat_clusters'
+Idents(obj) = 'seurat_clusters'
 pS2c = DotPlot(obj, features = unique(anno_gene), cluster.idents = F) + 
   RotatedAxis() + # scale_color_gradient2(low = "lightgray", mid = "white", high = "#FB8604") + 
   theme(axis.title.x = element_blank(),strip.text.x = element_text(angle=90, size = 10)) +
   theme(strip.background =element_rect(fill="#F0F8FF"),legend.key.size = unit(0.3, 'cm'), legend.title = element_text(size=7),legend.text = element_text(size=7)) +
   FontSize(x.text = 9, y.text = 10,main = 9) +labs(x = NULL, y = NULL)
 ggsave("02_bubblePlot_pS2c.pdf",plot=pS2c, width = 11, height = 5)
-
 
 #################
 ## figure S2b  ##
@@ -110,4 +109,4 @@ dot_data <- pS2d$data
 # Preview the data
 head(dot_data)
 # Write to a tab-separated file
-write.table(dot_data, file = "03_pS2d_data.tsv", sep = "\t", quote = FALSE, row.names = TRUE)
+write.table(dot_data, file = "03_pS2d_data_23880.tsv", sep = "\t", quote = FALSE, row.names = TRUE)
