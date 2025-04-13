@@ -31,7 +31,7 @@ dir='03_FigureS3'
 dir.create(dir)
 setwd(dir)
 
-load('/rsrch9/home/genomic_med/lwang22_lab/Xinmiao/6_RMC_RCC/06_RMC_revision_240415/03_result/02_whole_umap/06_subset_240422/01_T/00_obj_TNK_5518.Rdata')
+load('/rsrch9/home/genomic_med/lwang22_lab/Xinmiao/6_RMC_RCC/06_RMC_revision_240415/03_result/02_whole_umap/16_source_data/03_FigureS3/01_obj_TNK.Rdata')
 
 obj = obj_TNK
 ###########
@@ -73,7 +73,14 @@ pS3b = DotPlot(obj, features = unique(annotation_gene), cluster.idents = T) +
   theme(axis.title.x = element_blank(),strip.text.x = element_text(angle=90, size = 10)) +
   theme(strip.background =element_rect(fill="#F0F8FF"),legend.key.size = unit(0.3, 'cm'), legend.title = element_text(size=6),legend.text = element_text(size=6)) +
   FontSize(x.text = 9, main = 12)
-ggsave("02_pS3b.pdf",plot=pS3b, width = 5, height = 5)
+ggsave("02_pS3b.pdf",plot=pS3b, width = 5, height = 4)
+
+dot_data <- pS3b$data
+# Preview the data
+head(dot_data)
+# Write to a tab-separated file
+write.table(dot_data, file = "02_pS3b_data.tsv", sep = "\t", quote = FALSE, row.names = TRUE)
+
 
 ###########
 ## pS3c  ##
@@ -81,7 +88,7 @@ ggsave("02_pS3b.pdf",plot=pS3b, width = 5, height = 5)
 
 plots = list()
 for (i in annotation_gene){
-  plots[[i]] = FeaturePlot(obj, features = i,order = TRUE, cols = c('royalblue','royalblue','springgreen','yellow',"red")) + NoLegend()
+  plots[[i]] = FeaturePlot(obj, features = i,order = TRUE) + NoLegend()
 }
 
 pS3c = wrap_plots(plots = plots, nrow =3)
