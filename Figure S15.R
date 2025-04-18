@@ -3,7 +3,6 @@ library(xlsx)
 #################
 ## figure S15  ##
 #################
-
 dt = read.xlsx('/rsrch3/scratch/genomic_med/xyan4/Project/1_Jianfeng/2_subprojects/6_RMC_RCC/05_RMC_pre_post/03_result/03_bulk/01_bulk_gsea_result_REACTOME_MS_edit.xlsx',sheet='01_bulk_gsea_result_REACTOME')
 cc_green = c('REACTOME_CELL_CYCLE_CHECKPOINTS','REACTOME_CELLULAR_RESPONSE_TO_STARVATION',
 'REACTOME_DNA_REPLICATION','REACTOME_S_PHASE','REACTOME_SYNTHESIS_OF_DNA','REACTOME_G2_M_CHECKPOINTS',

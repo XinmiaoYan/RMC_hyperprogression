@@ -47,7 +47,6 @@ setwd(dir)
 ## figure S17  ##
 #################
 load('/rsrch6/home/genomic_med/lwang22_lab/Xinmiao/2_subprojects/6_RMC_RCC/06_RMC_revision_240415/03_result/02_whole_umap/07_whole_clean_data_240422/03_similarity/01_ALL/00_obj_TumorMye_6339.Rdata')
-
 table(obj$CellClass, obj$Treatment)
 treat_color = c('PostNI'='#FFD966',
                 'Baseline' = '#a8adb4',

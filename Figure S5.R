@@ -47,7 +47,6 @@ setwd(dir)
 ###########
 ## pS5  ##
 ###########
-
 degs = read_excel('/rsrch6/home/genomic_med/lwang22_lab/Xinmiao/2_subprojects/6_RMC_RCC/06_RMC_revision_240415/03_result/02_whole_umap/07_whole_clean_data_240422/02_Degs_pathways/01_ALL_SG_p/Epi/01_degs/01_degs.xlsx')
 df = degs
 cutoff = 0.1

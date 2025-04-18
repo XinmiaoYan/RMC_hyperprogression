@@ -46,7 +46,6 @@ setwd(dir)
 #################
 ## figure S18  ##
 #################
-
 load('/rsrch6/home/genomic_med/lwang22_lab/Xinmiao/2_subprojects/6_RMC_RCC/06_RMC_revision_240415/03_result/02_whole_umap/07_whole_clean_data_240422/03_similarity/01_ALL/00_obj_TumorMye_6339.Rdata')
 # obj = merge(obj_epi,obj_mye)
 obj = obj

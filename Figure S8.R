@@ -95,5 +95,3 @@ plot_data <- FetchData(obj, vars = c(focus_genes, "ident"))
 head(plot_data)
 
 write.table(plot_data, file = "01_p2S8_data.tsv", sep = "\t", quote = FALSE, row.names = TRUE)
-
-

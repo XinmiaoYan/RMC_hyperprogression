@@ -90,3 +90,4 @@ p1 = p+geom_text_repel(data = df, aes(x = df$avg_log2FC,
                     show.legend = FALSE)
 
 ggsave(plot = p1, file = '01_pS7.pdf', width = 14, height = 13)
+

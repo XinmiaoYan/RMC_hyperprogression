@@ -62,7 +62,6 @@ ggsave("03_p2c2_Treatment.pdf",plot=p2c2, width = 7, height = 6)
 ## figure 2d  ##
 #################
 parent_directory <- "/rsrch6/home/genomic_med/lwang22_lab/Xinmiao/2_subprojects/6_RMC_RCC/06_RMC_revision_240415/03_result/02_whole_umap/07_whole_clean_data_240422/02_Degs_pathways"
-
 # List subdirectories
 subfolders <- list.dirs(path = parent_directory, full.names = TRUE, recursive = FALSE)
 work_subfolders = subfolders[c(2,4)]
@@ -114,7 +113,6 @@ for(i in work_subfolders){
   df$stars <- ifelse(df$pvalue < 0.001, "***",
                       ifelse(df$pvalue < 0.01, "**",
                           ifelse(df$pvalue < 0.05, "*", "")))
-
   df = mutate(df, 
               Name = case_when(ID == 'REACTOME_CELL_CYCLE_MITOTIC' ~ 'Cell cycle mitotic',
                                ID == 'REACTOME_CELL_CYCLE' ~ 'Cell cycle',
@@ -231,7 +229,6 @@ plot_data <- FetchData(obj, vars = c(focus_genes, "ident"))
 head(plot_data)
 
 write.table(plot_data, file = "05_p2f_data.tsv", sep = "\t", quote = FALSE, row.names = TRUE)
-
 
 #################
 ## figure 2k  ##

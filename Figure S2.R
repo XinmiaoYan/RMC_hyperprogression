@@ -44,7 +44,6 @@ my_color = c("#A6CEE3", "#1F78B4", "#B2DF8A", "#33A02C", "#FB9A99",
 pS2a = DimPlot(obj, label = T, reduction = 'umap',pt.size = pt)
 ggsave("01_umap_pS2a.pdf",plot=pS2a, width = 5.5, height = 4.5)
 
-
 # Extract UMAP coordinates
 umap_coords <- Embeddings(obj, reduction = "umap")
 

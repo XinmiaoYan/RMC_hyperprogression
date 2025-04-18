@@ -60,7 +60,6 @@ write.table(output_df, file = "01_umap_with_metadata.tsv", sep = "\t", quote = F
 ###########
 ## pS3b  ##
 ###########
-
 annotation_gene = c('CD3D', 'CD3E', 'CD3G', #T     
                     'CD4', 'CD40LG', 'FOXP3',#CD4
                     'CD8A','CD8B', #CD8
