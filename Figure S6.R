@@ -47,6 +47,7 @@ setwd(dir)
 ###########
 ## pS6  ##
 ###########
+
 load('/rsrch9/home/genomic_med/lwang22_lab/Xinmiao/6_RMC_RCC/05_RMC_pre_post/03_result/02_whole_umap/06_subset/01_epi/00_obj_v3_3561_malignancy.Rdata')
 obj_v3
 obj1 = subset(obj_v3, subset = Malignancy == 'Malignant') 

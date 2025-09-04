@@ -15,7 +15,6 @@ isa_blue = c('REACTOME_IMMUNOREGULATORY_INTERACTIONS_BETWEEN_A_LYMPHOID_AND_A_NO
 'REACTOME_PD_1_SIGNALING',
 'REACTOME_INTERFERON_GAMMA_SIGNALING'
 )
-
 pathways =c(cc_green,isa_blue)
 
 dt = dt[c('ID','NES','pvalue','p.adjust','qvalues')]

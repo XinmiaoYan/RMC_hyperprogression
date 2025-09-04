@@ -22,6 +22,7 @@ library(glmGamPoi)
 rm(list = ls())
 
 setwd('/rsrch9/home/genomic_med/lwang22_lab/Xinmiao/6_RMC_RCC/06_RMC_revision_240415/03_result/02_whole_umap/')
+
 dir='16_source_data'
 dir.create(dir)
 setwd(dir)

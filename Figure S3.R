@@ -32,7 +32,6 @@ dir.create(dir)
 setwd(dir)
 
 load('/rsrch9/home/genomic_med/lwang22_lab/Xinmiao/6_RMC_RCC/06_RMC_revision_240415/03_result/02_whole_umap/16_source_data/03_FigureS3/01_obj_TNK.Rdata')
-
 obj = obj_TNK
 ###########
 ## pS3a  ##

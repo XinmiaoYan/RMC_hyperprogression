@@ -49,6 +49,7 @@ ggsave("01_clustering_p2b.pdf",plot=p2b, width = 6, height = 4.5)
 #################
 load('/rsrch9/home/genomic_med/lwang22_lab/Xinmiao/6_RMC_RCC/06_RMC_revision_240415/03_result/02_whole_umap/06_subset/01_epi/00_obj_v3_3561_malignancy.Rdata')
 obj = obj_v3
+
 pt = 0.6
 pa_color = colorRampPalette(brewer.pal(9, "Paired"))(9)
 p2c1 = DimPlot(obj, group.by = 'Patient', reduction = 'umap',pt.size = pt, cols= pa_color)

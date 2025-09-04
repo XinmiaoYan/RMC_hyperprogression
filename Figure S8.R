@@ -40,7 +40,6 @@ dir.create(dir)
 setwd(dir)
 
 load('/rsrch9/home/genomic_med/lwang22_lab/Xinmiao/6_RMC_RCC/06_RMC_revision_240415/03_result/02_whole_umap/16_source_data/01_FigureS2/00_scRNA_object.Rdata')
-
 dir='08_FigureS8'
 dir.create(dir)
 setwd(dir)
